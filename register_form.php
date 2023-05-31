@@ -10,14 +10,14 @@
 <body>
  
     <?php
-    include_once('nav_man.html');
+    include_once('nav_man.php');
     ?>
     <form action="" method="post">
         <div class="form_main_container">
             <div class="form_block solid_border">
                 <div class="form_line"><b>REJESTRACJA</b></div>
                 <div class="form_line">
-                    imię
+                    imię 
                     <input type="text">
                 </div>
                 <div class="form_line">
@@ -36,7 +36,7 @@
                     powtórz hasło
                     <input type="password">
                 </div>
-                <div class="form_line"><a href="">Masz już konto? Kliknij tu, by się zalogować.</a></div>
+                <div class="form_line"><a href="./login_form.php">Masz już konto? Kliknij tu, by się zalogować.</a></div>
                 <div class="form_line error">Błąd</div>
                 <div class="form_line"><button type="submit">potwierdź</button></div>
             </div>
