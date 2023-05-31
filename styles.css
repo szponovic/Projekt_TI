@@ -1,0 +1,382 @@
+/***************** OGÓLNE *********************/
+:root {
+    --blue00: #F2F5F8;
+    --blue01: #c8d8e4;    
+    --blue11: #2b6777;
+    --blue12: #005e9b;
+    --blue125: #004e81;
+    --blue21: #283644;
+    --blue215: #232f3b;
+}
+html, body{
+    margin: 0;
+    height:100%;
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+}
+.solid_border{
+    border: 1px var(--blue12) solid;
+}
+b{
+    color: var(--blue12);
+    text-align: center;
+}
+.error{
+    color: red;
+    visibility: hidden;
+}
+button{
+    background-color: var(--blue12);
+    border: 1px var(--blue12) solid;
+    border-radius: 8px;
+    color: white;
+    padding: 5px 30px;
+    font-size: inherit;
+}
+button:hover{
+    background-color: var(--blue125);
+    box-shadow: 0 0px 8px 0 rgba(65, 65, 65, 0.3), 0 0px 20px 0 rgba(170, 170, 170, 0.1);
+    cursor: pointer;
+}
+input, textarea{
+    border: 1px rgb(200, 200, 200) solid;
+    font-size: inherit;
+    padding: 2px;
+    margin-top:2px;
+    border-radius: 5px;
+}
+input:hover, textarea:hover{
+    border: 1px var(--blue12) solid;
+}
+
+/***************** PASEK *********************/
+.navbar{
+    width: 100%;
+    background-color: var(--blue12);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+    z-index: 1;
+    position: fixed;
+    top:0;
+    box-shadow: 0 0px 10px 0 rgba(46, 46, 46, 0.3), 0 0px 20px 0 rgba(139, 139, 139, 0.1);
+}
+.navbar_cell{
+    padding: 5px 1%;
+    min-width:98%;
+}
+#logo{
+    height:40px;
+    width:30px;
+    padding: 5px 5px 0 5px;
+}
+#part_lib_name{
+    display: none;
+}
+#full_lib_name{
+    display: none;
+}
+#logo>img{   
+    margin: auto;
+    display: block;
+    height: 40px;
+    padding:0;
+}
+.navbar_cell>div.navigation{
+    text-align: center;
+}
+.right>div.navbar_cell:hover{
+    background-color: var(--blue125);
+}
+.right>div.navbar_cell:hover .dropdown_content{ 
+    background-color: var(--blue125);
+}
+
+.dropdown_content:hover .right>div.navbar_cell{
+    background-color: var(--blue12);
+}
+.dropdown_content{
+    display: none;
+    background-color: var(--blue12);
+    font-size: 14px;
+    width:100%; 
+}
+.dropdown:hover .dropdown_content{
+    display: block;
+}
+.navbar_sides{
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown{
+    height:max-content;
+}
+.under_nav_space{
+    width:100%;
+    height: 170px;
+}
+/***************** FORMULARZE *********************/
+.form_main_container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form_block{
+    background-color: var(--blue00);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    width: 90%;
+    padding: 0 20px; 
+}
+.form_line{
+    width:100%;
+    padding-bottom: 15px; 
+    font-size: 12px;
+}
+.form_line:first-of-type{
+    width:100%;
+    padding: 30px 0; 
+    font-size: 22px;
+    text-align: center;
+}
+.form_line:last-of-type{
+    text-align: right;
+    padding-bottom: 20px;
+}
+.form_line:last-of-type>button{
+    font-size: inherit;
+}
+.form_line>input{
+    width:99%;
+    border: 1px rgb(200, 200, 200) solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+.form_line>input:hover{
+    box-shadow: 0 0px 4px 0 rgba(117, 117, 117, 0.3), 0 0px 10px 0 rgba(199, 199, 199, 0.1);
+    border: 1px var(--blue12) solid;
+}
+/***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
+.main_container{ 
+    width:100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mid_container{ 
+    width:98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mid_block{
+    width: 100%;
+    background-color: var(--blue00);
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.line{
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.center_text{
+    text-align: center;
+}
+.add{
+    color: var(--blue12);
+    border: 1px var(--blue12) dashed;
+    border-radius: 10px;
+}
+.mid_block>.line>button{
+    margin: 0 5px;
+}
+#book_change{
+    display: flex;
+    flex-direction: column;
+    font-size:14px; 
+}
+#book_change>.up{ 
+    display: flex;
+    flex-direction: column;
+}
+#book_change>div{
+    width:100%;
+}
+#book_change>.up>.left>.line>input{
+    width:97%;
+}
+textarea{
+    width:97%;
+}
+#book_change>.down>.line:last-of-type{
+    text-align: right;
+}
+#book_change>.down>.line:last-of-type>button{
+    font-size: inherit;
+    width: unset;
+    padding: 5px 15px;
+    margin: 0 0 0 10px;
+}
+
+@media only screen and (min-width: 481px) {
+    /***************** PASEK *********************/
+    .navbar_sides:first-of-type>.navbar_cell{
+        min-width: 40px; 
+    }
+    .navbar_sides{
+        flex-direction: row;
+        height: 50px;
+        line-height: 50px;
+    }
+    .navbar_sides>.right{ 
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar{
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar_cell{
+        float: left;
+        padding: 0;
+    }
+    .navbar_cell>img{   
+        height: 50px;
+    }
+    .navbar_cell>div.navigation:first-of-type{ 
+        padding: 0 15px;
+    }
+    .right>div.navbar_cell{
+        min-width: 129px;
+    }
+    .under_nav_space{
+        width:100%;
+        height: 80px;
+    }
+    /***************** FORMULARZE *********************/
+    .form_block{    
+        width: 320px;
+        padding: 30px 40px; 
+        margin-top: 30px;
+    }
+    .form_line{
+        padding-bottom: 25px; 
+        font-size: 16px;
+    }
+    .form_line:first-of-type{
+        width:100%;
+        padding: 50px 0; 
+        font-size: 35px;
+        text-align: center;
+    }
+    .form_line:last-of-type{
+        text-align: right;
+        padding: 10px 0 20px 0;
+    }
+    .form_line:last-of-type>button{
+        font-size: inherit;
+    }
+    input, textarea{
+        margin-top: 8px;
+        width:97%;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: inherit;
+    }
+    .form_line>input{
+        padding: 5px 8px;
+    }
+
+
+    /***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
+    .mid_container{ 
+        width:460px;
+    }
+    .line{
+        font-size: 16px;
+    }
+    .mid_block{
+        width: 100%;
+        background-color: var(--blue00);
+        margin-bottom: 30px;
+    }
+    #book_change{
+        display: flex;
+        flex-direction: column;
+        font-size:14px; 
+    }
+    #book_change>.up{ 
+        display: flex;
+        flex-direction: column;
+    }
+    #book_change>div{
+        width:100%;
+    }
+    #book_change>.up>.left>.line>input{
+        width:92%;
+    }
+    #book_change>.down>.line:last-of-type{
+        text-align: right;
+    }
+    #book_change>.down>.line:last-of-type>button{
+        padding: 5px 30px;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width: 769px) {
+    /***************** PASEK *********************/
+    #part_lib_name{
+        display: block;
+    }
+    /***************** FORMULARZE *********************/
+    
+    /***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
+    .mid_container{ 
+        width:600px;
+    }
+    #book_change>.up{ /*a potem row*/
+        display: flex;
+        flex-direction: row;
+    }
+    #book_change>.up>.left, #book_change>.up>.right{
+        width: 50%;
+    }
+    #book_change>.up>.right>.line>textarea{
+        height:400px;
+        width:92%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    /***************** PASEK *********************/
+    #part_lib_name{
+        display: none;
+    }
+    #full_lib_name{
+        display: block;
+    } 
+
+}
