@@ -10,7 +10,7 @@
 <body>
  
     <?php
-    include_once('nav_man.html');
+    include_once('nav_man.php');
     ?>
     <form action="" method="post">
         <div class="form_main_container">
