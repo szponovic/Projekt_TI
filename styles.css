@@ -13,6 +13,7 @@ html, body{
     height:100%;
     font-family: Verdana, sans-serif;
     box-sizing: border-box;
+    font-size: 14px;
 }
 a{
     text-decoration: none;
@@ -21,362 +22,195 @@ a{
 a:hover{
     text-decoration: underline;
 }
-.solid_border{
-    border: 1px var(--blue12) solid;
-}
-b{
-    color: var(--blue12);
-    text-align: center;
-}
-.error{
-    color: red;
-    visibility: hidden;
-}
 button{
-    background-color: var(--blue12);
-    border: 1px var(--blue12) solid;
-    border-radius: 8px;
     color: white;
-    padding: 5px 30px;
-    font-size: inherit;
-}
-button:hover{
-    background-color: var(--blue125);
-    box-shadow: 0 0px 8px 0 rgba(65, 65, 65, 0.3), 0 0px 20px 0 rgba(170, 170, 170, 0.1);
+    background-color: var(--blue12);
+    border:none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 15px;
+    margin: 2px 0;
     cursor: pointer;
 }
-input, textarea{
+button:hover{
+    background-color: var(--blue125)
+}
+input{
     border: 1px rgb(200, 200, 200) solid;
     font-size: inherit;
-    padding: 2px;
-    margin-top:2px;
+    padding: 3px 5px;
+    /*margin-top:2px;*/
     border-radius: 5px;
 }
-input:hover, textarea:hover{
+input:hover{
     border: 1px var(--blue12) solid;
 }
-
-/***************** PASEK *********************/
-.navbar{
-    width: 100%;
-    background-color: var(--blue12);
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: flex-start;
-    z-index: 1;
-    position: fixed;
-    top:0;
-    box-shadow: 0 0px 10px 0 rgba(46, 46, 46, 0.3), 0 0px 20px 0 rgba(139, 139, 139, 0.1);
-}
-.navbar_cell{
-    padding: 5px 1%;
-    min-width:98%;
-}
-#logo{
-    height:40px;
-    width:30px;
-    padding: 5px 5px 0 5px;
-}
-#part_lib_name{
-    display: none;
-}
-#full_lib_name{
-    display: none;
-}
-#logo>img{   
-    margin: auto;
-    display: block;
-    height: 40px;
-    padding:0;
-}
-.navbar_cell>div.navigation{
-    text-align: center;
-}
-.right>div.navbar_cell:hover{
-    background-color: var(--blue125);
-}
-.right>div.navbar_cell:hover .dropdown_content{ 
-    background-color: var(--blue125);
-}
-
-.dropdown_content:hover .right>div.navbar_cell{
-    background-color: var(--blue12);
-}
-.dropdown_content{
-    display: none;
-    background-color: var(--blue12);
-    font-size: 14px;
-    width:100%; 
-}
-.dropdown:hover .dropdown_content{
-    display: block;
-}
-.navbar_sides{
-    display: flex;
-    flex-direction: column;
-}
-.right{
-    display: flex;
-    flex-direction: column;
-}
-.dropdown{
-    height:max-content;
-}
-.under_nav_space{
-    width:100%;
-    height: 170px;
-}
-/***************** FORMULARZE *********************/
-.form_main_container{
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.form_block{
-    background-color: var(--blue00);
-    margin-bottom: 30px;
-    border-radius: 15px;
-    width: 90%;
-    padding: 0 20px; 
-}
-.form_line{
-    width:100%;
-    padding-bottom: 15px; 
-    font-size: 12px;
-}
-.form_line:first-of-type{
-    width:100%;
-    padding: 30px 0; 
-    font-size: 22px;
-    text-align: center;
-}
-.form_line:last-of-type{
-    text-align: right;
-    padding-bottom: 20px;
-}
-.form_line:last-of-type>button{
-    font-size: inherit;
-}
-.form_line>input{
-    width:99%;
-    border: 1px rgb(200, 200, 200) solid;
-    border-radius: 5px;
-    padding: 2px;
-}
-.form_line>input:hover{
-    box-shadow: 0 0px 4px 0 rgba(117, 117, 117, 0.3), 0 0px 10px 0 rgba(199, 199, 199, 0.1);
-    border: 1px var(--blue12) solid;
-}
-/***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
+/***************** ZARZĄDZANIE *********************/
 .main_container{ 
     width:100%;
-    display: flex; 
+    display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 .mid_container{ 
-    width:98%;
-    display: flex;
+    width:100%;
+    display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-.mid_block{
-    width: 100%;
+.middle_block{
     background-color: var(--blue00);
+    border: 1px var(--blue12) solid;
+    width:98%;
     margin-bottom: 20px;
-    border-radius: 15px;
-}
-.line{
-    padding: 10px 20px;
-    font-size: 14px;
-}
-.center_text{
-    text-align: center;
-}
-.add{
-    color: var(--blue12);
-    border: 1px var(--blue12) dashed;
     border-radius: 10px;
 }
-.mid_block>.line>button{
-    margin: 0 5px;
+#add{ 
+    border: 1px var(--blue12) dashed;
+    color:var(--blue12);
+    text-align: center;
 }
-#book_change{
-    display: flex;
-    flex-direction: column;
-    font-size:14px; 
+#add>.line{
+    padding: 0 10px;
 }
-#book_change>.up{ 
-    display: flex;
-    flex-direction: column;
+#add, #remove, #user_info, #choose_role, #new_user{
+    padding: 15px 0;
 }
-#book_change>div{
-    width:100%;
+#remove{
+    text-align: center;
 }
-#book_change>.up>.left>.line>input{
-    width:97%;
+#remove>.line{
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
-textarea{
-    width:97%;
+#remove>.buttons{
+    padding: 0 10px;
 }
-#book_change>.down>.line:last-of-type{
+#remove>.buttons>button{
+    margin: 2px 4px;
+}
+#user_info>.info>.line{
+    padding: 0 20px;
+    margin-bottom: 7px;
+}
+#user_info>.buttons{
+    height:0;
+    overflow:hidden;
+    transition-duration: 0.2s;
+}
+#user_info:hover .buttons{
+    height:96px;
+    transition-duration: 0.5s;
+}
+#user_info>.buttons>.line{
+    padding: 0 20px;
+}
+#user_info>.buttons>.line>button{
+    width: 100%;
+} 
+#choose_role>.line, #new_user>.line{
+    padding: 0 20px;
+    margin-bottom: 15px;
+    text-align:center;
+}
+#choose_role>.line>.role_radios>.radio, #new_user>.line>.role_radios>.radio{
+    margin-bottom: 5px;
+    text-align: left;
+}
+#choose_role>.buttons, #new_user>.buttons{
+    padding: 0 20px;
     text-align: right;
 }
-#book_change>.down>.line:last-of-type>button{
-    font-size: inherit;
-    width: unset;
-    padding: 5px 15px;
-    margin: 0 0 0 10px;
+#choose_role>.buttons>button, #new_user>.buttons>button{
+    margin: 2px 0 2px 8px;
+}
+#new_user>.input_line{
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+#new_user>.input_line>input{
+    width:98%;
+    margin-top:5px;
 }
 
-@media only screen and (min-width: 481px) {
-    /***************** PASEK *********************/
-    .navbar_sides:first-of-type>.navbar_cell{
-        min-width: 40px; 
-    }
-    .navbar_sides{
-        flex-direction: row;
-        height: 50px;
-        line-height: 50px;
-    }
-    .navbar_sides>.right{ 
-        display: flex;
-        flex-direction: row;
-    }
-    .navbar{
-        height: 50px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .navbar_cell{
-        float: left;
-        padding: 0;
-    }
-    .navbar_cell>img{   
-        height: 50px;
-    }
-    .navbar_cell>div.navigation:first-of-type{ 
-        padding: 0 15px;
-    }
-    .right>div.navbar_cell{
-        min-width: 129px;
-    }
-    .under_nav_space{
-        width:100%;
-        height: 80px;
-    }
-    /***************** FORMULARZE *********************/
-    .form_block{    
-        width: 320px;
-        padding: 30px 40px; 
-        margin-top: 30px;
-    }
-    .form_line{
-        padding-bottom: 25px; 
-        font-size: 16px;
-    }
-    .form_line:first-of-type{
-        width:100%;
-        padding: 50px 0; 
-        font-size: 35px;
-        text-align: center;
-    }
-    .form_line:last-of-type{
-        text-align: right;
-        padding: 10px 0 20px 0;
-    }
-    .form_line:last-of-type>button{
-        font-size: inherit;
-    }
-    input, textarea{
-        margin-top: 8px;
-        width:97%;
-        border-radius: 5px;
-        padding: 5px 8px;
-        font-size: inherit;
-    }
-    .form_line>input{
-        padding: 5px 8px;
-    }
 
 
-    /***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
-    .mid_container{ 
+@media only screen and (min-width: 481px){
+/***************** ZARZĄDZANIE *********************/
+    html, body{
+        font-size: 15px;
+    }
+    .mid_container{
         width:460px;
     }
-    .line{
+    .middle_block{
+        width:100%;
+        margin-bottom: 25px;
+    }
+    #user_info>.info{
+        width: 60%;
+        float:left;
+    }
+    #user_info>.buttons{
+        width: 40%;
+        float:left;
+    }
+    #user_info>.buttons>.line>button{
+        margin:2px 0;
+    }
+    #user_info>.info>.line{
+        margin-bottom: 15px;
+    }
+
+    #user_info>.buttons{
+        height:unset;
+        overflow:unset;
+        visibility: hidden;
+    }
+    #user_info:hover .buttons{
+        visibility: visible;
+    }
+    #choose_role>.line>.role_radios, #new_user>.line>.role_radios{
+        display: inline-block;
+        text-align: center;
+    }
+    #choose_role>.line>.role_radios>.radio, #new_user>.line>.role_radios>.radio{
+        float: left;
+    }
+    #new_user>.input_line>input{
+        width:340px;
+        margin-top:0;
+        float:right;
+    }
+}
+
+@media only screen and (min-width: 769px){
+/***************** ZARZĄDZANIE *********************/
+    html, body{
         font-size: 16px;
     }
-    .mid_block{
-        width: 100%;
-        background-color: var(--blue00);
-        margin-bottom: 30px;
-    }
-    #book_change{
-        display: flex;
-        flex-direction: column;
-        font-size:14px; 
-    }
-    #book_change>.up{ 
-        display: flex;
-        flex-direction: column;
-    }
-    #book_change>div{
-        width:100%;
-    }
-    #book_change>.up>.left>.line>input{
-        width:92%;
-    }
-    #book_change>.down>.line:last-of-type{
-        text-align: right;
-    }
-    #book_change>.down>.line:last-of-type>button{
-        padding: 5px 30px;
-    }
-
-}
-
-
-
-
-@media only screen and (min-width: 769px) {
-    /***************** PASEK *********************/
-    #part_lib_name{
-        display: block;
-    }
-    /***************** FORMULARZE *********************/
-    
-    /***************** ZARZĄDZANIE KSIĄŻKAMI *********************/
-    .mid_container{ 
+    .mid_container{
         width:600px;
     }
-    #book_change>.up{ /*a potem row*/
-        display: flex;
-        flex-direction: row;
+    .middle_block{
+        margin-bottom: 30px;
     }
-    #book_change>.up>.left, #book_change>.up>.right{
-        width: 50%;
+    #choose_role>.line{
+        margin-bottom: 20px;
     }
-    #book_change>.up>.right>.line>textarea{
-        height:400px;
-        width:92%;
+    #new_user>.input_line>input{
+        width:470px;
+        margin-top:0;
+        float:right;
     }
 }
 
+@media only screen and (min-width: 1024px){
 
+}
 
-@media only screen and (min-width: 1024px) {
-    /***************** PASEK *********************/
-    #part_lib_name{
-        display: none;
-    }
-    #full_lib_name{
-        display: block;
-    } 
+@media only screen and (min-width: 769px){
 
 }
