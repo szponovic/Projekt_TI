@@ -15,6 +15,9 @@ html, body{
     box-sizing: border-box;
     font-size: 14px;
 }
+b{
+    color: #005e9b;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -35,14 +38,15 @@ button{
 button:hover{
     background-color: var(--blue125)
 }
-input{
+input, textarea{
     border: 1px rgb(200, 200, 200) solid;
     font-size: inherit;
     padding: 3px 5px;
     /*margin-top:2px;*/
     border-radius: 5px;
+    font: inherit;
 }
-input:hover{
+input:hover, textarea:hover{
     border: 1px var(--blue12) solid;
 }
 /***************** ZARZĄDZANIE *********************/
@@ -75,7 +79,7 @@ input:hover{
 #add>.line{
     padding: 0 10px;
 }
-#add, #remove, #user_info, #choose_role, #new_user{
+#add, #remove, #user_info, #choose_role, #new_user, #change_book, #book_info{
     padding: 15px 0;
 }
 #remove{
@@ -119,22 +123,71 @@ input:hover{
     margin-bottom: 5px;
     text-align: left;
 }
-#choose_role>.buttons, #new_user>.buttons{
+#choose_role>.buttons, #new_user>.buttons, #change_book>.buttons{
     padding: 0 20px;
     text-align: right;
 }
-#choose_role>.buttons>button, #new_user>.buttons>button{
+#choose_role>.buttons>button, #new_user>.buttons>button, #change_book>.buttons>button{
     margin: 2px 0 2px 8px;
 }
-#new_user>.input_line{
+#new_user>.input_line, #change_book>.up>.left>.input_line, #change_book>.up>.right>.input_line{
     padding: 0 20px;
     margin-bottom: 15px;
 }
-#new_user>.input_line>input{
+#change_book>.up>.left>.input_line:last-of-type{
+    margin-bottom: 10px;
+}
+#new_user>.input_line>input, #change_book>.up>.left>.input_line>input, #change_book>.up>.right>.input_line>input, #change_book>.up>.right>.input_line>textarea{
     width:98%;
     margin-top:5px;
 }
-
+#book_info>.up>.left>.up{
+    display:flex;
+    flex-direction: row;
+}
+#book_info>.up>.left>.up>.picture{
+    width:25%;
+}
+#book_info>.up>.left>.up>.picture>img{
+    width:60%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#book_info>.up>.left>.up>.basic_info{
+    width:75%;
+}
+#book_info>.up>.left>.up>.basic_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#book_info>.up>.left>.desc_phone, #book_info>.desc_pc, #book_info>.up>.right>.quantity, #book_info>.up>.right>.buttons{
+    padding: 0 20px;
+} 
+#book_info>.up>.right{
+    display:flex;
+    flex-direction: column;
+}
+#book_info>.up>.right>.buttons{
+    text-align: right;
+}
+#book_info>.desc_pc{
+    display: none;
+}
+#book_info>.up>.left>.up, #book_info>.up>.left>.desc_phone, #book_info>.up>.right>.quantity{
+    margin-bottom: 20px;
+}
+#book_info>.up>.right>.buttons{
+    height:0;
+    overflow: hidden;
+    transition-duration: 0.2s;
+}
+#book_info:hover .up>.right>.buttons{
+    overflow: unset;
+    height:31px;
+    transition-duration: 0.5s;
+}
 
 
 @media only screen and (min-width: 481px){
@@ -179,8 +232,8 @@ input:hover{
     #choose_role>.line>.role_radios>.radio, #new_user>.line>.role_radios>.radio{
         float: left;
     }
-    #new_user>.input_line>input{
-        width:340px;
+    #new_user>.input_line>input, #change_book>.input_line>textarea{
+        width:330px;
         margin-top:0;
         float:right;
     }
@@ -205,7 +258,55 @@ input:hover{
         margin-top:0;
         float:right;
     }
+    #change_book>.up>.left{
+        width:49%;
+        float:left;
+    }
+    #change_book>.up>.right{
+        width:49%;
+        float:left;
+    }
+    #change_book>.up>.right>.input_line>textarea{
+        height: 310px;
+    }
+    #book_info>.desc_pc{
+        display: block;
+    }
+    #book_info>.up>.left>.desc_phone{
+        display: none;
+    }
+    #book_info>.up{
+        display: flex;
+        flex-direction: row;
+    }
+    #book_info>.up>.left{
+        width:70%;
+    }
+    #book_info>.up>.right{
+        width:30%;
+    }
+    #book_info>.up>.left>.up>.picture>img{
+        width:70%;
+    }
+    #book_info>.up>.right>.quantity{
+        text-align: right;
+    }
+
+    #book_info>.up>.right>.buttons{
+        height:auto;
+        overflow: unset;
+        display: none;
+    }
+    #book_info:hover .up>.right>.buttons{
+        display:block;
+    }
+    #book_info>.up>.right>.buttons>button{
+        width:120px;
+    }
+
 }
+
+/*
 
 @media only screen and (min-width: 1024px){
 
