@@ -13,7 +13,7 @@
     include_once('nav_man.php');
     ?>
     <form action="" method="post">
-        <div class="form_main_container">
+        <div class="main_container">
             <div class="form_block solid_border">
                 <div class="form_line"><b>REJESTRACJA</b></div>
                 <div class="form_line">
