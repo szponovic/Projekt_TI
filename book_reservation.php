@@ -5,42 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="navbar_sides">
-            <div class="navbar_cell" id="logo">
-                <img src="./img/logo.png">
+
+
+    <div class="nav_container">
+        <li><a class="" href="">Wyloguj</a></li>
+        <li><a href="">Spis ksiazek</a></li>
+
+    </div><br>
+
+
+    <div class="main_container">
+        <div class="mid_container">
+
+            <div class="middle_block" id="user_info">
+                <div class="line"><b>Tytuł:</b> .... <b>Autor:</b> ... ......</div>
+
             </div>
-            <div class="navbar_cell" id="part_lib_name">
-                Biblioteka im. Juliusza Kobrzyńskiego
-            </div>
-            <div class="navbar_cell" id="full_lib_name">
-                Biblioteka im. Juliusza Kobrzyńskiego w Zamościu
-            </div>
-        </div>
-        <div class="navbar_sides right">
-            <div class="navbar_cell">
-                <div class="navigation">
-                    <a href="">KATALOG</a>
+
+            <div class="left_block" id="user_info">
+                <div class="info">
+
+                    <div class="line"><b>Opis ksiażki</b></div>
+                    <div class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc in suscipit leo. Quisque in turpis eu quam vehicula tempus.
+                        Proin pulvinar felis leo, ac faucibus sem scelerisque vitae. Aliquam a eleifend urna.
+                        Sed mattis semper lorem, auctor mollis nisl volutpat ut. Quisque pharetra, augue a pretium
+                        rutrum,
+                        orci risus mollis massa, vel malesuada felis turpis vitae lorem. Vivamus eget tincidunt lectus.
+                        Duis pellentesque lacus eget rhoncus gravida. Cras et dui ante.</div>
+
                 </div>
-            </div>
-            <div class="navbar_cell dropdown">
-                <div class="navigation">
-                    KONTO
-                    <div class="dropdown_content">
-                        <a href="login_form.php">WYLOGUJ</a>
+                <div class="line">
+                    <img src="./img/sherlock.jpg" alt="Sherlock">
+                </div>
+            </div><br>
+            <div class="middle_block" id="choose_role">
+                <div class="line"><b>Co chcesz zrobić?</b></div>
+                <div class="line">
+                    <div class="buttons">
+                        <button>Anuluj</button>
+                        <button>Wypozycz</button>
+                        <button>Oddaje</button>
                     </div>
                 </div>
+
             </div>
+
+
+
         </div>
     </div>
-    <div class="under_nav_space"></div>
-    <div> <a href="register_form.php">
-            <img src="./img/sherlock.jpg" alt="Sherlock" style="width:200px;height:300px;"></a> </div>
+
 </body>
 
 </html>
