@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
+
     <?php
-    include_once('nav_man.php');
+        include('nav_man.php');
     ?>
+
     <form action="" method="post">
-        <div class="form_main_container">
+        <div class="main_container">
             <div class="form_block solid_border">
                 <div class="form_line"><b>LOGOWANIE</b></div>
                 <div class="form_line">
@@ -26,9 +27,11 @@
                 </div>
                 <div class="form_line"><a href="">Nie masz jeszcze konta? Kliknij tu, by się zarejestrować.</a></div>
                 <div class="form_line error">Błąd</div>
-                <div class="form_line"><button type="submit">potwierdź</button></div>
+                <div class="form_line"><button type="submit">zaloguj</button></div>
             </div>
         </div>
     </form>
+
 </body>
 </html> 
+
