@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,26 +30,51 @@
                     <a href="">KATALOG</a>
                 </div>
             </div>
-            <div class="navbar_cell dropdown">
-                <div class="navigation">
-                    ZARZĄDZANIE
-                    <div class="dropdown_content">
-                        <a href="">WYPOŻYCZENIA</a>
-                    </div>
-                    <div class="dropdown_content">
-                        <a href="">UŻYTKOWNICY</a>
-                    </div>
-                    <div class="dropdown_content">
-                        <a href="">BAZA KSIĄŻEK</a>
+
+            <?php
+            if (isset($_SESSION['logged']['role_id']) && $_SESSION['logged']['role_id']==3){
+                echo <<<END
+                <div class="navbar_cell dropdown">
+                    <div class="navigation">
+                        ZARZĄDZANIE
+                        <div class="dropdown_content">
+                            <a href="">WYPOŻYCZENIA</a>
+                        </div>
+                        <div class="dropdown_content">
+                            <a href="">UŻYTKOWNICY</a>
+                        </div>
+                        <div class="dropdown_content">
+                            <a href="">BAZA KSIĄŻEK</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+                END;
+            }
+
+            ?>
+
             <div class="navbar_cell dropdown">
                 <div class="navigation">
                     KONTO
-                    <div class="dropdown_content">
-                        <a href="">WYLOGUJ</a>
-                    </div>
+                    <?php
+                    if (isset($_SESSION['logged']['email'])){
+                        echo <<<END
+                            <div class="dropdown_content">
+                                <a href="logout.php">WYLOGUJ</a>
+                            </div>
+                        END;
+                    }else{
+                        echo <<<END
+                            <div class="dropdown_content">
+                                <a href="login_form.php">LOGOWANIE</a>
+                            </div>
+                            <div class="dropdown_content">
+                                <a href="register_form.php">REJESTRACJA</a>
+                            </div>
+                        END;
+                    }
+                    ?>
+                    
                 </div>
             </div>
         </div>
