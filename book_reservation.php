@@ -11,7 +11,12 @@
 
 <body>
 
-
+    <?php include('connections_jan.php');
+    $bookId = $_GET['id'];
+    $sql = "SELECT * FROM book WHERE id = $bookId";
+    $result = $conn->query($sql);
+    $row = $result->fetch_row();
+    ?>
     <div class="nav_container">
         <li><a class="" href="">Wyloguj</a></li>
         <li><a href="">Spis ksiazek</a></li>
@@ -23,21 +28,21 @@
         <div class="mid_container">
 
             <div class="middle_block" id="user_info">
-                <div class="line"><b>Tytuł:</b> .... <b>Autor:</b> ... ......</div>
+                <div class="line"><b>Tytuł:
+                        <?php echo $row[1]; ?>
+                    </b>
+                    <?php ?> <b>Autor:</b>
+                    <?php echo $row[2]; ?>
+                </div>
 
             </div>
 
             <div class="left_block" id="user_info">
                 <div class="info">
-
                     <div class="line"><b>Opis ksiażki</b></div>
-                    <div class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc in suscipit leo. Quisque in turpis eu quam vehicula tempus.
-                        Proin pulvinar felis leo, ac faucibus sem scelerisque vitae. Aliquam a eleifend urna.
-                        Sed mattis semper lorem, auctor mollis nisl volutpat ut. Quisque pharetra, augue a pretium
-                        rutrum,
-                        orci risus mollis massa, vel malesuada felis turpis vitae lorem. Vivamus eget tincidunt lectus.
-                        Duis pellentesque lacus eget rhoncus gravida. Cras et dui ante.</div>
+                    <div class="line">
+                        <?php echo $row[5]; ?>
+                    </div>
 
                 </div>
                 <div class="line">
