@@ -37,7 +37,7 @@ CREATE TABLE `books` (
   `genre` varchar(50) NOT NULL,
   `year` year(4) NOT NULL,
   `picture` varchar(100) NOT NULL,
-  `status` varchar(50) NOT NULL DEFAULT 'in storage',
+  `status` varchar(50) NOT NULL DEFAULT 'dostępne',
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
