@@ -2,7 +2,7 @@
     session_start();
 
     if (isset($_SESSION['logged']['email'])){
-        header('location: cat.php'); 
+        header('location: books.php'); 
     }
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 <body>
 
     <?php
-        include('nav_man.php');
+        include('navbar.php');
     ?>
  
     <form action="register.php" method="post">
@@ -44,7 +44,7 @@
                     powtórz hasło
                     <input type="password" name="haslo2">
                 </div>
-                <div class="form_line"><a href="">Masz już konto? Kliknij tu, by się zalogować.</a></div>
+                <div class="form_line"><a href="login_form.php">Masz już konto? Kliknij tu, by się zalogować.</a></div>
                 <div class="form_line error">
                 <?php
                     if (isset($_SESSION['error'])){
