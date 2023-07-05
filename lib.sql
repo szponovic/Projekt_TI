@@ -50,9 +50,11 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`book_id`, `title`, `author`, `genre`, `year`, `picture`, `status`, `description`) VALUES
-(4, 'HP', 'JKR', 'scifi', '1999', 'sowa.png', '3', 'Cykl przedstawia świat magii, czyli społeczność czarodziejów, istniejącą równolegle do świata niemagicznego, tak zwanego mugolskiego. Głównymi bohaterami są nastoletni Harry Potter oraz jego przyjaciele: Ron Weasley i Hermiona Granger, uczniowie Szkoły Magii i Czarodziejstwa w Hogwarcie.'),
-(7, 'rf', 'ygu', 'gy', '2000', 'g', '4', 'fy'),
-(8, 'HP2', 'JKK', 'dcifi', '2008', 'ghfdefg.png', 'dostępne', '2dtghhafadfah');
+(4, 'Harry Potter - I kamień filozoficzny','J.K Rowling', 'Literatura młodzieżowa','1999', 'sowa.png','3','Cykl przedstawia świat magii, czyli społeczność czarodziejów, istniejącą równolegle do świata niemagicznego, tak zwanego mugolskiego. Głównymi bohaterami są nastoletni Harry Potter oraz jego przyjaciele: Ron Weasley i Hermiona Granger, uczniowie Szkoły Magii i Czarodziejstwa w Hogwarcie.'),
+(9, 'List w butelce','Nicholas Sparks','Romans', '1998', 'list.png','2','Theresa Osborne przebywa na wakacjach w zatoce Cape Cod. Jest samotną dziennikarką i póki co nie spotkała na swej drodze odpowiedniego mężczyzny...'),
+(5, 'Władca Pierścieni - Powrót Króla', 'J.R.R Tolkien', 'Fantasy','1955', 'wladca.png', '3', 'Zebrały się armie Władcy Ciemności, a jego przerażający cień sięga coraz dalej. Połączone siły ludzi, krasnoludów, elfów i entów stają naprzeciw nawałnicy mroku....');
+
+
 
 -- --------------------------------------------------------
 
