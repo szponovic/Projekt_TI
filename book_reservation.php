@@ -11,11 +11,23 @@
 
 <body>
 
-    <?php include('connections_jan.php');
-    $bookId = $_GET['id'];
-    $sql = "SELECT * FROM book WHERE id = $bookId";
-    $result = $conn->query($sql);
-    $row = $result->fetch_row();
+    <?php include('connect.php');
+
+
+    if (isset($_GET['book_id'])) {
+        $bookId = $_GET['book_id'];
+        $sql = "SELECT * FROM books WHERE book_id = $bookId";
+        $result = $connect->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_row();
+
+        } else {
+            echo "No book found with the specified ID.";
+        }
+    } else {
+        echo "No book ID specified in the URL.";
+    }
     ?>
     <div class="nav_container">
         <li><a class="" href="">Wyloguj</a></li>
