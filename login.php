@@ -37,7 +37,8 @@
                     $_SESSION['logged']['role_id'] = $customer['role_id'];
                     session_regenerate_id();
                     $_SESSION['logged']['session_id'] = session_id();
-                    header('location: cat.php');
+                    setcookie("logged_in", true, time() + 3600, "/");
+                    header('location: books.php');
                 }else{
                     $error = 1;
                 }
@@ -55,5 +56,5 @@
                     exit();   
             }
         }
-
+        
 ?>
