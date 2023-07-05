@@ -2,7 +2,7 @@
     session_start();
     
     if (isset($_SESSION['logged']['email'])){
-        header('location: cat.php'); 
+        header('location: books.php'); 
     }
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 <body>
 
     <?php
-        include('nav_man.php');
+        include_once('navbar.php');
     ?>
 
     <form action="login.php" method="post">
@@ -32,7 +32,7 @@
                     hasło <br>
                     <input type="password" name="haslo">
                 </div>
-                <div class="form_line"><a href="">Nie masz jeszcze konta? Kliknij tu, by się zarejestrować.</a></div>
+                <div class="form_line"><a href="register_form.php">Nie masz jeszcze konta? Kliknij tu, by się zarejestrować.</a></div>
                 <div class="form_line error">
                 <?php
                     if (isset($_SESSION['error'])){
