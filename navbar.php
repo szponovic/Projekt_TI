@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +24,7 @@
         <div class="navbar_sides right">
             <div class="navbar_cell">
                 <div class="navigation">
-                    <a href="">KATALOG</a>
+                    <a href="books.php">KATALOG</a>
                 </div>
             </div>
 
@@ -41,16 +38,15 @@
                             <a href="">WYPOŻYCZENIA</a>
                         </div>
                         <div class="dropdown_content">
-                            <a href="">UŻYTKOWNICY</a>
+                            <a href="user_management.php">UŻYTKOWNICY</a>
                         </div>
                         <div class="dropdown_content">
-                            <a href="">BAZA KSIĄŻEK</a>
+                            <a href="book_management.php">BAZA KSIĄŻEK</a>
                         </div>
                     </div>
                 </div>
                 END;
             }
-
             ?>
 
             <div class="navbar_cell dropdown">
@@ -74,7 +70,6 @@
                         END;
                     }
                     ?>
-                    
                 </div>
             </div>
         </div>
