@@ -33,10 +33,10 @@
 
 
 
-    include('connections_jan.php');
+    include('connect.php');
     // Fetch all books from the table
-    $sql = "SELECT * FROM book";
-    $result = $conn->query($sql);
+    $sql = "SELECT * FROM books";
+    $result = $connect->query($sql);
 
 
     // $row = $result->fetch_assoc();
@@ -44,10 +44,6 @@
     
 
     for ($i = 0; $i < $result->num_rows; $i++) {
-
-        // $row = $result->fetch_assoc();
-    
-        // for ($i = 0; $i < $result->num_rows; $i++) {
         $row = $result->fetch_row();
 
         ?>
@@ -70,21 +66,25 @@
                         <div class="line">
                             <?php echo $row[3]; ?>
                         </div>
-                        <div class="line"><b>Ilosc stron</b></div>
+                        <div class="line"><b>Rok wydania</b></div>
                         <div class="line">
                             <?php echo $row[4]; ?>
                         </div>
                         <div class="line"><b>Opis</b></div>
                         <div class="line">
-                            <?php echo $row[5]; ?>
+                            <?php echo $row[7]; ?>
                         </div>
 
                     </div>
                     <div class="line">
-                        <!--  <a href="book_reservation.php"><img src="./img/sherlock.jpg" alt="Sherlock"></a> -->
-                        <! -- -->
-                            <a onclick="go_to_reservation(<?php echo $row[0]; ?>)"><img src="./img/sherlock.jpg"
-                                    alt="Sherlock"></a>
+
+                        <! --Zdjecie ksiazki -->
+
+
+
+
+                            <a onclick="go_to_reservation(<?php echo $row[0]; ?>)"><img
+                                    src="./img/<?php echo $row[5] ?>" alt="<?php echo $row[5] ?>"></a>
 
                     </div>
                 </div>
