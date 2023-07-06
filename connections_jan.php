@@ -2,7 +2,7 @@
 $servername = "localhost"; // Replace with the appropriate hostname or IP address
 $username = "root"; // Replace with your phpMyAdmin username
 $password = ""; // Replace with your phpMyAdmin password
-$database = "my_base"; // Replace with the name of your database
+$database = "lib"; // Replace with the name of your database
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $database);
