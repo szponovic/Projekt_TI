@@ -18,13 +18,11 @@
 </head>
 
 <body>
+    <?php
+    include_once('navbar.php');
+    ?>
 
     <!-- Pasek nawigacji -->
-    <div class="nav_container">
-        <li><a class="" href="logout.php">Wyloguj</a></li>
-        <li><a href="books.php">Spis ksiazek</a></li>
-
-    </div><br>
 
     <!-- Zawartość -->
     <!-- Tutaj wczyta ilosc ksiazek z bazy danych -->
