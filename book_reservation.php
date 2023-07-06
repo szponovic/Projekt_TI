@@ -10,7 +10,9 @@
 </head>
 
 <body>
-
+    <?php
+    include_once('navbar.php');
+    ?>
     <?php include('connect.php');
 
     $bookId = $_GET['id'];
@@ -18,11 +20,6 @@
     $result = $connect->query($sql);
     $row = $result->fetch_row();
     ?>
-    <div class="nav_container">
-        <li><a class="" href="logout.php">Wyloguj</a></li>
-        <li><a href="books.php">Spis ksiazek</a></li>
-
-    </div><br>
 
 
     <div class="main_container">
