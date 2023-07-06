@@ -19,8 +19,8 @@
     $row = $result->fetch_row();
     ?>
     <div class="nav_container">
-        <li><a class="" href="">Wyloguj</a></li>
-        <li><a href="">Spis ksiazek</a></li>
+        <li><a class="" href="logout.php">Wyloguj</a></li>
+        <li><a href="books.php">Spis ksiazek</a></li>
 
     </div><br>
 
@@ -55,9 +55,10 @@
                 <div class="line"><b>Co chcesz zrobić?</b></div>
                 <div class="line">
                     <div class="buttons">
-                        <button>Anuluj</button>
-                        <button>Wypozycz</button>
-                        <button>Oddaje</button>
+                        <button onclick="location.href='books.php'">Anuluj</button>
+                        <button onclick="location.href=''">Wypozycz</button>
+                        <button onclick="location.href=''">Oddaje</button>
+
                     </div>
                 </div>
 
