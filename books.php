@@ -80,11 +80,8 @@
 
                         <! --Zdjecie ksiazki -->
 
-
-
-
-                            <a onclick="go_to_reservation(<?php echo $row[0]; ?>)"><img
-                                    src="./img/<?php echo $row[5] ?>" alt="<?php echo $row[5] ?>"></a>
+                            <a onclick="go_to_reservation(<?php echo $row[0]; ?>)"><img src="./img/<?php echo $row[5] ?>"
+                                    alt="<?php echo $row[5] ?>"></a>
 
                     </div>
                 </div>
