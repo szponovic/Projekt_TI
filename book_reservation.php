@@ -25,10 +25,9 @@ if (isset($_POST['borrow_button'])) {
     $result = $connect->query($sql);
     $row = $result->fetch_row();
     ?>
-    <div class="nav_container">
-        <li><a class="" href="logout.php">Wyloguj</a></li>
-        <li><a href="books.php">Spis ksiazek</a></li>
-    </div><br>
+    <?php
+    include_once('navbar.php');
+    ?>
 
     <div class="main_container">
         <div class="mid_container">
