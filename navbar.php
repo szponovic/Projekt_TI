@@ -53,20 +53,23 @@
                 <div class="navigation">
                     KONTO
                     <?php
-                    if (isset($_SESSION['logged']['email'])){
+                    if (isset($_SESSION['logged']['email'])) {
                         echo <<<END
-                            <div class="dropdown_content">
-                                <a href="logout.php">WYLOGUJ</a>
-                            </div>
+                        <div class="dropdown_content">
+                            <a href="profile.php">PROFIL</a>
+                        </div>
+                        <div class="dropdown_content">
+                            <a href="logout.php">WYLOGUJ</a>
+                        </div>
                         END;
-                    }else{
+                    } else {
                         echo <<<END
-                            <div class="dropdown_content">
-                                <a href="login_form.php">LOGOWANIE</a>
-                            </div>
-                            <div class="dropdown_content">
-                                <a href="register_form.php">REJESTRACJA</a>
-                            </div>
+                        <div class="dropdown_content">
+                            <a href="login_form.php">LOGOWANIE</a>
+                        </div>
+                        <div class="dropdown_content">
+                            <a href="register_form.php">REJESTRACJA</a>
+                        </div>
                         END;
                     }
                     ?>

@@ -14,8 +14,8 @@
     }
 
     require_once 'connect.php';
-    $email = $_POST['email'];
-    $haslo = $_POST['haslo'];
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $haslo = isset($_POST['haslo']) ? $_POST['haslo'] : '';
 
     $sql = "SELECT user_id, imie, nazwisko, email, haslo, role_id FROM `users` WHERE `email` =?";
     $stmt = $connect->prepare($sql);

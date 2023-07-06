@@ -1,3 +1,20 @@
+<?php
+    session_start();
+    if (isset($_SESSION['logged']['email'])) {
+        $userEmail = $_SESSION['logged']['email'];
+        // Pobierz dodatkowe informacje o użytkowniku z bazy danych lub innego źródła danych
+        // Przykładowo:
+        $userId = $_SESSION['logged']['user_id'];
+        $userName = $_SESSION['logged']['imie'];
+        $userLastName = $_SESSION['logged']['nazwisko'];
+        $userRoleId = $_SESSION['logged']['role_id'];
+        
+        // Możesz teraz wykorzystać te zmienne w różnych miejscach na stronie, np. w navbarze
+    } else {
+        // Użytkownik nie jest zalogowany
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

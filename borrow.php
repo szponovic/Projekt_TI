@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    if (isset($_SESSION['logged']['email'])) {
+        $userEmail = $_SESSION['logged']['email'];
+        $userId = $_SESSION['logged']['user_id'];
+        $userName = $_SESSION['logged']['imie'];
+        $userLastName = $_SESSION['logged']['nazwisko'];
+        $userRoleId = $_SESSION['logged']['role_id'];
+        
+    } else {
+    }
+    include_once('navbar.php');
+    ?>
+
+    <?php
+
+    include('connect.php');
+    $sql = "SELECT * FROM books";
+    $result = $connect->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,11 +51,6 @@
 </head>
 
 <body>
-    <div class="nav_container">
-        <li><a class="" href="">Wyloguj</a></li>
-        <li><a href="books.php">Spis książek</a></li>
-    </div>
-
     <?php
     include('connections_jan.php');
     ?>
@@ -76,10 +93,7 @@
             }
 
             if (isset($_POST['days'])) {
-                // Tutaj możesz wprowadzić dane do tabeli borrowings
-                // Podpowiedź: Pamiętaj, że musisz odczytać user_id z sesji, nie tylko z formularza
-                // oraz użyj funkcji date() i strtotime() do obliczenia daty 'from_date' i 'to_date'
-                // i wstaw te dane do tabeli borrowings
+
             }
             ?>
         </div>
