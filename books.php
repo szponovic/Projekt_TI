@@ -39,11 +39,6 @@
     include_once('navbar.php');
     ?>
 
-    <!-- Pasek nawigacji -->
-
-    <!-- Zawartość -->
-    <!-- Tutaj wczyta ilosc ksiazek z bazy danych -->
-    <!-- Kazda wartosc nazwa, gatunek, il. stron, ocena będzie w osobnej zmiennej -->
     <?php
 
 

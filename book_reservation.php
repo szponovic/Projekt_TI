@@ -19,16 +19,13 @@ if (isset($_POST['borrow_button'])) {
 <body>
     <?php
     include('connect.php');
-
+    include_once('navbar.php');
     $bookId = $_GET['id'];
     $sql = "SELECT * FROM books WHERE book_id = $bookId";
     $result = $connect->query($sql);
     $row = $result->fetch_row();
     ?>
-    <div class="nav_container">
-        <li><a class="" href="logout.php">Wyloguj</a></li>
-        <li><a href="books.php">Spis ksiazek</a></li>
-    </div><br>
+    
 
     <div class="main_container">
         <div class="mid_container">
