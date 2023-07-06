@@ -15,30 +15,8 @@ html, body{
     box-sizing: border-box;
     font-size: 14px;
 }
-/***************** Pasek nawigacji *********************/
-.nav_container {
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--blue12);
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-/*****************----------------------- *********************/
 b{
-    color: #005e9b;
+    color: var(--blue12);
 }
 a{
     text-decoration: none;
@@ -71,6 +49,107 @@ input, textarea{
 input:hover, textarea:hover{
     border: 1px var(--blue12) solid;
 }
+/***************** PASEK *********************/
+.navbar{
+    width: 100%;
+    background-color: var(--blue12);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+    z-index: 1;
+    position: fixed;
+    top:0;
+    box-shadow: 0 0px 10px 0 rgba(46, 46, 46, 0.3), 0 0px 20px 0 rgba(139, 139, 139, 0.1);
+}
+.navbar_cell{
+    padding: 5px 1%;
+    min-width:98%;
+}
+#logo{
+    height:40px;
+    width:30px;
+    padding: 5px 5px 0 5px;
+}
+#part_lib_name{
+    display: none;
+}
+#full_lib_name{
+    display: none;
+}
+#logo>img{   
+    margin: auto;
+    display: block;
+    height: 40px;
+    padding:0;
+}
+.navbar_cell>div.navigation{
+    text-align: center;
+}
+.right>div.navbar_cell:hover{
+    background-color: var(--blue125);
+}
+.right>div.navbar_cell:hover .dropdown_content{ 
+    background-color: var(--blue125);
+}
+
+.dropdown_content:hover .right>div.navbar_cell{
+    background-color: var(--blue12);
+}
+.dropdown_content{
+    height:0;
+    overflow:hidden;
+    background-color: var(--blue12);
+    font-size: 14px;
+    width:100%; 
+    transition-duration: 0.2s;
+}
+.dropdown:hover .dropdown_content{
+    height: 20px;
+    margin-top:3px;
+    transition-duration: 0.4s;
+}
+.navbar_sides{
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown{
+    height:max-content;
+}
+.under_nav_space{
+    width:100%;
+    height: 140px;
+}
+/***************** FORMULARZE *********************/
+.form_block{
+    background-color: var(--blue00);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    width: 80%;
+    padding: 0 20px; 
+    border: 1px var(--blue12) solid;
+}
+.form_line{
+    width:100%;
+    margin-bottom: 15px; 
+}
+.form_line:first-of-type{
+    padding: 30px 0 10px 0; 
+    font-size: 22px;
+    text-align: center;
+}
+.form_line:last-of-type{
+    text-align: right;
+}
+.form_line>input{
+    width:97%;
+    margin-top: 2px;
+}
+
 /***************** ZARZĄDZANIE *********************/
 .main_container{ 
     width:100%;
@@ -101,27 +180,27 @@ input:hover, textarea:hover{
 #add>.line{
     padding: 0 10px;
 }
-#add, #remove, #user_info, #choose_role, #new_user, #change_book, #book_info{
+#add, #delete_user, #delete_book, #user_info, #choose_role, #new_user, #change_book, #new_book, #book_info{
     padding: 15px 0;
 }
-#remove{
+div#delete_user, #delete_book{
     text-align: center;
 }
-#remove>.line{
+#delete_user>form>.line, #delete_book>form>.line{
     padding: 0 10px;
     margin-bottom: 10px;
 }
-#remove>.buttons{
+#delete_user>form>.buttons, #delete_book>form>.buttons{
     padding: 0 10px;
 }
-#remove>.buttons>button{
+#delete_user>form>.buttons>button, #delete_book>form>.buttons>button{
     margin: 2px 4px;
 }
 #user_info>.info>.line{
     padding: 0 20px;
     margin-bottom: 7px;
 }
-#user_info>.buttons{
+/*#user_info>.buttons{
     height:0;
     overflow:hidden;
     transition-duration: 0.2s;
@@ -135,35 +214,40 @@ input:hover, textarea:hover{
 }
 #user_info>.buttons>.line>button{
     width: 100%;
-} 
-#choose_role>.line, #new_user>.line{
+}*/
+#choose_role>form>.line, #new_user>form>.line{
     padding: 0 20px;
     margin-bottom: 15px;
     text-align:center;
 }
-#choose_role>.line>.role_radios>.radio, #new_user>.line>.role_radios>.radio{
+/*#choose_role>form>.line>.role_radios{
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+}*/
+#choose_role>form>.line>.role_radios>.radio, #new_user>form>.line>.role_radios>.radio{
     margin-bottom: 5px;
     text-align: left;
 }
-#choose_role>.buttons, #new_user>.buttons, #change_book>.buttons{
+#choose_role>form>.buttons, #new_user>form>.buttons, #change_book>form>.buttons, #new_book>form>.buttons{
     padding: 0 20px;
     text-align: right;
 }
-#choose_role>.buttons>button, #new_user>.buttons>button, #change_book>.buttons>button{
+#choose_role>form>.buttons>button, #new_user>form>.buttons>button, #change_book>form>.buttons>button, #new_book>form>.buttons>button{
     margin: 2px 0 2px 8px;
 }
-#new_user>.input_line, #change_book>.up>.left>.input_line, #change_book>.up>.right>.input_line{
+#new_user>form>.input_line, #change_book>form>.up>.left>.input_line, #new_book>form>.up>.left>.input_line, #change_book>form>.up>.right>.input_line, #new_book>form>.up>.right>.input_line{
     padding: 0 20px;
     margin-bottom: 15px;
 }
-#change_book>.up>.left>.input_line:last-of-type{
+#change_book>form>.up>.left>.input_line:last-of-type, #new_book>form>.up>.left>.input_line:last-of-type{
     margin-bottom: 10px;
 }
-#new_user>.input_line>input, #change_book>.up>.left>.input_line>input, #change_book>.up>.right>.input_line>input, #change_book>.up>.right>.input_line>textarea{
+#new_user>form>.input_line>input, #change_book>form>.up>.left>.input_line>input, #new_book>form>.up>.left>.input_line>input, #change_book>form>.up>.right>.input_line>input, #new_book>form>.up>.right>.input_line>input, #change_book>form>.up>.right>.input_line>textarea, #new_book>form>.up>.right>.input_line>textarea{
     width:98%;
     margin-top:5px;
 }
-#book_info>.up>.left>.up{
+/*#book_info>.up>.left>.up{
     display:flex;
     flex-direction: row;
 }
@@ -209,11 +293,116 @@ input:hover, textarea:hover{
     overflow: unset;
     height:31px;
     transition-duration: 0.5s;
+}*/
+table{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    width:100%;
+}
+table>tbody>tr>td>form>button{
+    float:left;
+    width: 100%;;
+}
+tr, td, th{
+    overflow: hidden;
+}
+td{
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+button#add_book, button#add_user{
+    background-color: var(--blue00);
+    border: 1px var(--blue12) dashed;
+    border-radius: 12px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 17px;
+    color: var(--blue12);
+    margin-bottom: 30px;
+}
+div#new_user, div#new_book{
+    display: none;
 }
 
-
 @media only screen and (min-width: 481px){
-/***************** ZARZĄDZANIE *********************/
+    /***************** PASEK *********************/
+    .navbar_sides:first-of-type>.navbar_cell{
+        min-width: 40px; 
+    }
+    .navbar_sides{
+        flex-direction: row;
+        height: 50px;
+        line-height: 50px;
+    }
+    .navbar_sides>.right{ 
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar{
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar_cell{
+        float: left;
+        padding: 0;
+        font-size: 16px;
+    }
+    .navbar_cell>img{   
+        height: 50px;
+    }
+    .navbar_cell>div.navigation:first-of-type{ 
+        padding: 0 15px;
+    }
+    .right>div.navbar_cell{
+        min-width: 130px;
+    }
+    .under_nav_space{
+        width:100%;
+        height: 80px;
+    }
+    .dropdown:hover .dropdown_content{
+        height: 50px;
+    }
+    .dropdown_content{
+        height:50px;
+        margin-top:0px;
+        overflow:auto;
+        display: none;
+    }
+    .dropdown:hover .dropdown_content{
+        display: block;
+    }
+    /*********** FORMULARZE **********/
+    
+    .form_block{
+        background-color: var(--blue00);
+        margin: 30px 0;
+        border-radius: 15px;
+        width: 320px;
+        padding: 30px 40px 10px; 
+    }
+    .form_line{
+        margin-bottom: 25px; 
+    }
+    .form_line:first-of-type{
+        padding: 30px 0 30px 0; 
+        font-size: 30px;
+    }
+    .form_line>input{
+        margin-top: 8px;
+        width:97%;
+        padding: 5px 8px;
+    }
+    .form_line>button{
+        font-size: 16px;
+        padding: 6px 25px;
+    }
+
+    /***************** ZARZĄDZANIE *********************/
     html, body{
         font-size: 15px;
     }
@@ -224,7 +413,7 @@ input:hover, textarea:hover{
         width:100%;
         margin-bottom: 25px;
     }
-    #user_info>.info{
+    /*#user_info>.info{
         width: 60%;
         float:left;
     }
@@ -246,15 +435,15 @@ input:hover, textarea:hover{
     }
     #user_info:hover .buttons{
         visibility: visible;
-    }
-    #choose_role>.line>.role_radios, #new_user>.line>.role_radios{
+    }*/
+    #choose_role>.line>.role_radios, #new_user>form>.line>.role_radios{
         display: inline-block;
         text-align: center;
     }
-    #choose_role>.line>.role_radios>.radio, #new_user>.line>.role_radios>.radio{
+    #choose_role>.line>.role_radios>.radio, #new_user>form>.line>.role_radios>.radio{
         float: left;
     }
-    #new_user>.input_line>input, #change_book>.input_line>textarea{
+    #new_user>form>.input_line>input, #change_book>.input_line>textarea, #new_book>.input_line>textarea{
         width:330px;
         margin-top:0;
         float:right;
@@ -262,7 +451,11 @@ input:hover, textarea:hover{
 }
 
 @media only screen and (min-width: 769px){
-/***************** ZARZĄDZANIE *********************/
+    /***************** PASEK *********************/
+    #part_lib_name{
+        display: block;
+    }
+    /***************** ZARZĄDZANIE *********************/
     html, body{
         font-size: 16px;
     }
@@ -275,23 +468,23 @@ input:hover, textarea:hover{
     #choose_role>.line{
         margin-bottom: 20px;
     }
-    #new_user>.input_line>input{
+    #new_user>form>.input_line>input{
         width:470px;
         margin-top:0;
         float:right;
     }
-    #change_book>.up>.left{
+    #change_book>form>.up>.left, #new_book>form>.up>.left{
         width:49%;
         float:left;
     }
-    #change_book>.up>.right{
+    #change_book>form>.up>.right, #new_book>form>.up>.right{
         width:49%;
         float:left;
     }
-    #change_book>.up>.right>.input_line>textarea{
+    #change_book>form>.up>.right>.input_line>textarea, #new_book>form>.up>.right>.input_line>textarea{
         height: 310px;
     }
-    #book_info>.desc_pc{
+    /*#book_info>.desc_pc{
         display: block;
     }
     #book_info>.up>.left>.desc_phone{
@@ -324,16 +517,21 @@ input:hover, textarea:hover{
     }
     #book_info>.up>.right>.buttons>button{
         width:120px;
-    }
+    }*/
 
 }
 
-/*
+
 
 @media only screen and (min-width: 1024px){
-
+    /***************** PASEK *********************/
+    #part_lib_name{
+        display: none;
+    }
+    #full_lib_name{
+        display: block;
+    } 
 }
 
-@media only screen and (min-width: 769px){
 
-}
+
