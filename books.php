@@ -21,8 +21,8 @@
 
     <!-- Pasek nawigacji -->
     <div class="nav_container">
-        <li><a class="" href="">Wyloguj</a></li>
-        <li><a href="">Spis ksiazek</a></li>
+        <li><a class="" href="logout.php">Wyloguj</a></li>
+        <li><a href="books.php">Spis ksiazek</a></li>
 
     </div><br>
 
