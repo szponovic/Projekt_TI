@@ -26,9 +26,9 @@ Projekt strony bibliotecznej
 ...
 ## Autorzy
 
-- Tomasz Biskupski - tbiskupski@edu.cdv.pl
-- Jan Frąckowiak - jfrackowiak@edu.cdv.pl
 - Izabela Nowak - inowak2@edu.cdv.pl
+- Jan Frąckowiak - jfrackowiak@edu.cdv.pl
+- Tomasz Biskupski - tbiskupski@edu.cdv.pl
 
 ## Licencja
 
