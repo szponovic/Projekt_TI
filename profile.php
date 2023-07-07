@@ -95,9 +95,33 @@ $row = $result->fetch_assoc();
             <p><b>Imię:</b> <?php echo $row['imie']; ?></p>
             <p><b>Nazwisko:</b> <?php echo $row['nazwisko']; ?></p>
             <p><b>Email:</b> <?php echo $row['email']; ?></p>
-            <p><b>Hasło:</b> **********</p> <!-- Nie wyświetlamy hasła -->
+            <p><b>Hasło:</b> <span id="password"><?php echo '**********'; ?></span> <button id="reveal_button">Odsłoń</button></p>
             <p><b>Rola:</b> <?php echo $row['role_id']; ?></p>
         </div>
+    </div>
+
+    <style>
+        .profile_info p {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile_info button {
+            margin-left: 10px;
+        }
+    </style>
+
+    <script>
+        var passwordSpan = document.getElementById("password");
+        var revealButton = document.getElementById("reveal_button");
+        revealButton.addEventListener("click", function() {
+            passwordSpan.textContent = '<?php echo $row['haslo']; ?>';
+            revealButton.style.display = 'none';
+        });
+    </script>
+
+    <div style="text-align: center;">
+        <a href="user_history.php"><button type="button">User History</button></a>
     </div>
 </body>
 
