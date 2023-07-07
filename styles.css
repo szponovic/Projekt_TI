@@ -8,49 +8,57 @@
     --blue21: #283644;
     --blue215: #232f3b;
 }
-html, body{
+
+html, body {
     margin: 0;
-    height:100%;
+    height: 100%;
     font-family: Verdana, sans-serif;
     box-sizing: border-box;
     font-size: 14px;
 }
-b{
+
+b {
     color: var(--blue12);
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-button{
+
+button {
     color: white;
     background-color: var(--blue12);
-    border:none;
+    border: none;
     border-radius: 5px;
     padding: 5px 20px;
     font-size: 15px;
     margin: 2px 0;
     cursor: pointer;
 }
-button:hover{
-    background-color: var(--blue125)
+
+button:hover {
+    background-color: var(--blue125);
 }
-input, textarea{
+
+input, textarea {
     border: 1px rgb(200, 200, 200) solid;
     font-size: inherit;
     padding: 3px 5px;
-    /*margin-top:2px;*/
     border-radius: 5px;
     font: inherit;
 }
-input:hover, textarea:hover{
+
+input:hover, textarea:hover {
     border: 1px var(--blue12) solid;
 }
+
 /***************** PASEK *********************/
-.navbar{
+.navbar {
     width: 100%;
     background-color: var(--blue12);
     display: flex;
@@ -59,261 +67,272 @@ input:hover, textarea:hover{
     justify-content: flex-start;
     z-index: 1;
     position: fixed;
-    top:0;
+    top: 0;
     box-shadow: 0 0px 10px 0 rgba(46, 46, 46, 0.3), 0 0px 20px 0 rgba(139, 139, 139, 0.1);
 }
-.navbar_cell{
+
+.navbar_cell {
     padding: 5px 1%;
-    min-width:98%;
+    min-width: 98%;
 }
-#logo{
-    height:40px;
-    width:30px;
+
+#logo {
+    height: 40px;
+    width: 30px;
     padding: 5px 5px 0 5px;
 }
-#part_lib_name{
+
+#part_lib_name {
     display: none;
 }
-#full_lib_name{
+
+#full_lib_name {
     display: none;
 }
-#logo>img{   
+
+#logo>img {
     margin: auto;
     display: block;
     height: 40px;
-    padding:0;
+    padding: 0;
 }
-.navbar_cell>div.navigation{
+
+.navbar_cell>div.navigation {
     text-align: center;
 }
-.right>div.navbar_cell:hover{
-    background-color: var(--blue125);
-}
-.right>div.navbar_cell:hover .dropdown_content{ 
+
+.right>div.navbar_cell:hover {
     background-color: var(--blue125);
 }
 
-.dropdown_content:hover .right>div.navbar_cell{
+.right>div.navbar_cell:hover .dropdown_content { 
+    background-color: var(--blue125);
+}
+
+.dropdown_content:hover .right>div.navbar_cell {
     background-color: var(--blue12);
 }
-.dropdown_content{
-    height:0;
-    overflow:hidden;
+
+.dropdown_content {
+    height: 0;
+    overflow: hidden;
     background-color: var(--blue12);
     font-size: 14px;
-    width:100%; 
+    width: 100%;
     transition-duration: 0.2s;
 }
-.dropdown:hover .dropdown_content{
+
+.dropdown:hover .dropdown_content {
     height: 20px;
-    margin-top:3px;
+    margin-top: 3px;
     transition-duration: 0.4s;
 }
-.navbar_sides{
+
+.navbar_sides {
     display: flex;
     flex-direction: column;
 }
-.right{
+
+.right {
     display: flex;
     flex-direction: column;
 }
-.dropdown{
-    height:max-content;
+
+.dropdown {
+    height: max-content;
 }
-.under_nav_space{
-    width:100%;
+
+.under_nav_space {
+    width: 100%;
     height: 140px;
 }
 /***************** FORMULARZE *********************/
-.form_block{
+.form_block {
     background-color: var(--blue00);
     margin-bottom: 30px;
     border-radius: 15px;
     width: 80%;
-    padding: 0 20px; 
+    padding: 0 20px;
     border: 1px var(--blue12) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.form_line{
-    width:100%;
-    margin-bottom: 15px; 
+
+.form_line {
+    width: 100%;
+    margin-bottom: 15px;
 }
-.form_line:first-of-type{
-    padding: 30px 0 10px 0; 
+
+.form_line:first-of-type {
+    padding: 30px 0 10px 0;
     font-size: 22px;
     text-align: center;
 }
-.form_line:last-of-type{
+
+.form_line:last-of-type {
     text-align: right;
 }
-.form_line>input{
-    width:97%;
+
+.form_line > input {
+    width: 97%;
     margin-top: 2px;
 }
 
 /***************** ZARZĄDZANIE *********************/
-.main_container{ 
-    width:100%;
-    display:flex;
+.main_container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-.mid_container{ 
-    width:100%;
-    display:flex;
+
+.mid_container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-.middle_block{
+
+.middle_block {
     background-color: var(--blue00);
     border: 1px var(--blue12) solid;
-    width:98%;
+    width: 98%;
     margin-bottom: 20px;
     border-radius: 10px;
 }
-#add{ 
+
+#add {
     border: 1px var(--blue12) dashed;
-    color:var(--blue12);
+    color: var(--blue12);
     text-align: center;
 }
-#add>.line{
+
+#add > .line {
     padding: 0 10px;
 }
-#add, #delete_user, #delete_book, #user_info, #choose_role, #new_user, #change_book, #new_book, #book_info{
+
+#add,
+#delete_user,
+#delete_book,
+#user_info,
+#choose_role,
+#new_user,
+#change_book,
+#new_book,
+#book_info {
     padding: 15px 0;
 }
-div#delete_user, #delete_book{
+
+div#delete_user,
+#delete_book {
     text-align: center;
 }
-#delete_user>form>.line, #delete_book>form>.line{
+
+#delete_user > form > .line,
+#delete_book > form > .line {
     padding: 0 10px;
     margin-bottom: 10px;
 }
-#delete_user>form>.buttons, #delete_book>form>.buttons{
+
+#delete_user > form > .buttons,
+#delete_book > form > .buttons {
     padding: 0 10px;
 }
-#delete_user>form>.buttons>button, #delete_book>form>.buttons>button{
+
+#delete_user > form > .buttons > button,
+#delete_book > form > .buttons > button {
     margin: 2px 4px;
 }
-#user_info>.info>.line{
+
+#user_info > .info > .line {
     padding: 0 20px;
     margin-bottom: 7px;
 }
-/*#user_info>.buttons{
-    height:0;
-    overflow:hidden;
-    transition-duration: 0.2s;
-}
-#user_info:hover .buttons{
-    height:96px;
-    transition-duration: 0.5s;
-}
-#user_info>.buttons>.line{
-    padding: 0 20px;
-}
-#user_info>.buttons>.line>button{
-    width: 100%;
-}*/
-#choose_role>form>.line, #new_user>form>.line{
+
+#choose_role > form > .line,
+#new_user > form > .line {
     padding: 0 20px;
     margin-bottom: 15px;
-    text-align:center;
+    text-align: center;
 }
-/*#choose_role>form>.line>.role_radios{
-    width:200px;
-    margin-left:auto;
-    margin-right:auto;
-}*/
-#choose_role>form>.line>.role_radios>.radio, #new_user>form>.line>.role_radios>.radio{
+
+#choose_role > form > .line > .role_radios > .radio,
+#new_user > form > .line > .role_radios > .radio {
     margin-bottom: 5px;
     text-align: left;
 }
-#choose_role>form>.buttons, #new_user>form>.buttons, #change_book>form>.buttons, #new_book>form>.buttons{
+
+#choose_role > form > .buttons,
+#new_user > form > .buttons,
+#change_book > form > .buttons,
+#new_book > form > .buttons {
     padding: 0 20px;
     text-align: right;
 }
-#choose_role>form>.buttons>button, #new_user>form>.buttons>button, #change_book>form>.buttons>button, #new_book>form>.buttons>button{
+
+#choose_role > form > .buttons > button,
+#new_user > form > .buttons > button,
+#change_book > form > .buttons > button,
+#new_book > form > .buttons > button {
     margin: 2px 0 2px 8px;
 }
-#new_user>form>.input_line, #change_book>form>.up>.left>.input_line, #new_book>form>.up>.left>.input_line, #change_book>form>.up>.right>.input_line, #new_book>form>.up>.right>.input_line{
+
+#new_user > form > .input_line,
+#change_book > form > .up > .left > .input_line,
+#new_book > form > .up > .left > .input_line,
+#change_book > form > .up > .right > .input_line,
+#new_book > form > .up > .right > .input_line {
     padding: 0 20px;
     margin-bottom: 15px;
 }
-#change_book>form>.up>.left>.input_line:last-of-type, #new_book>form>.up>.left>.input_line:last-of-type{
+
+#change_book > form > .up > .left > .input_line:last-of-type,
+#new_book > form > .up > .left > .input_line:last-of-type {
     margin-bottom: 10px;
 }
-#new_user>form>.input_line>input, #change_book>form>.up>.left>.input_line>input, #new_book>form>.up>.left>.input_line>input, #change_book>form>.up>.right>.input_line>input, #new_book>form>.up>.right>.input_line>input, #change_book>form>.up>.right>.input_line>textarea, #new_book>form>.up>.right>.input_line>textarea{
-    width:98%;
-    margin-top:5px;
+
+#new_user > form > .input_line > input,
+#change_book > form > .up > .left > .input_line > input,
+#new_book > form > .up > .left > .input_line > input,
+#change_book > form > .up > .right > .input_line > input,
+#new_book > form > .up > .right > .input_line > input,
+#change_book > form > .up > .right > .input_line > textarea,
+#new_book > form > .up > .right > .input_line > textarea {
+    width: 98%;
+    margin-top: 5px;
 }
-/*#book_info>.up>.left>.up{
-    display:flex;
-    flex-direction: row;
-}
-#book_info>.up>.left>.up>.picture{
-    width:25%;
-}
-#book_info>.up>.left>.up>.picture>img{
-    width:60%;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#book_info>.up>.left>.up>.basic_info{
-    width:75%;
-}
-#book_info>.up>.left>.up>.basic_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#book_info>.up>.left>.desc_phone, #book_info>.desc_pc, #book_info>.up>.right>.quantity, #book_info>.up>.right>.buttons{
-    padding: 0 20px;
-} 
-#book_info>.up>.right{
-    display:flex;
-    flex-direction: column;
-}
-#book_info>.up>.right>.buttons{
-    text-align: right;
-}
-#book_info>.desc_pc{
-    display: none;
-}
-#book_info>.up>.left>.up, #book_info>.up>.left>.desc_phone, #book_info>.up>.right>.quantity{
-    margin-bottom: 20px;
-}
-#book_info>.up>.right>.buttons{
-    height:0;
-    overflow: hidden;
-    transition-duration: 0.2s;
-}
-#book_info:hover .up>.right>.buttons{
-    overflow: unset;
-    height:31px;
-    transition-duration: 0.5s;
-}*/
-table{
-    margin:0;
-    padding:0;
+
+table {
+    margin: 0;
+    padding: 0;
     font-size: 15px;
-    width:100%;
+    width: 100%;
 }
-table>tbody>tr>td>form>button{
-    float:left;
-    width: 100%;;
+
+table > tbody > tr > td > form > button {
+    float: left;
+    width: 100%;
 }
-tr, td, th{
+
+tr,
+td,
+th {
     overflow: hidden;
 }
-td{
+
+td {
     text-align: center;
 }
+
 tr:nth-child(even) {
     background-color: white;
 }
-button#add_book, button#add_user{
+
+button#add_book,
+button#add_user {
     background-color: var(--blue00);
     border: 1px var(--blue12) dashed;
     border-radius: 12px;
@@ -323,205 +342,157 @@ button#add_book, button#add_user{
     color: var(--blue12);
     margin-bottom: 30px;
 }
-div#new_user, div#new_book{
+
+div#new_user,
+div#new_book {
     display: none;
 }
 
-@media only screen and (min-width: 481px){
+
+@media only screen and (min-width: 481px) {
     /***************** PASEK *********************/
-    .navbar_sides:first-of-type>.navbar_cell{
-        min-width: 40px; 
+    .navbar_sides:first-of-type > .navbar_cell {
+      min-width: 40px;
     }
-    .navbar_sides{
-        flex-direction: row;
-        height: 50px;
-        line-height: 50px;
+    .navbar_sides {
+      display: flex;
+      flex-direction: row;
+      height: 50px;
+      line-height: 50px;
     }
-    .navbar_sides>.right{ 
-        display: flex;
-        flex-direction: row;
+    .navbar_sides > .right {
+      display: flex;
+      flex-direction: row;
     }
-    .navbar{
-        height: 50px;
-        flex-direction: row;
-        justify-content: space-between;
+    .navbar {
+      height: 50px;
+      flex-direction: row;
+      justify-content: space-between;
     }
-    .navbar_cell{
-        float: left;
-        padding: 0;
-        font-size: 16px;
+    .navbar_cell {
+      padding: 0;
+      font-size: 16px;
     }
-    .navbar_cell>img{   
-        height: 50px;
+    .navbar_cell > img {
+      height: 50px;
     }
-    .navbar_cell>div.navigation:first-of-type{ 
-        padding: 0 15px;
+    .navbar_cell > div.navigation:first-of-type {
+      padding: 0 15px;
     }
-    .right>div.navbar_cell{
-        min-width: 130px;
+    .right > div.navbar_cell {
+      min-width: 130px;
     }
-    .under_nav_space{
-        width:100%;
-        height: 80px;
+    .under_nav_space {
+      width: 100%;
+      height: 80px;
     }
-    .dropdown:hover .dropdown_content{
-        height: 50px;
+    .dropdown:hover .dropdown_content {
+      height: 50px;
     }
-    .dropdown_content{
-        height:50px;
-        margin-top:0px;
-        overflow:auto;
-        display: none;
+    .dropdown_content {
+      height: 50px;
+      margin-top: 0px;
+      overflow: auto;
+      display: none;
     }
-    .dropdown:hover .dropdown_content{
-        display: block;
+    .dropdown:hover .dropdown_content {
+      display: block;
     }
     /*********** FORMULARZE **********/
-    
-    .form_block{
-        background-color: var(--blue00);
-        margin: 30px 0;
-        border-radius: 15px;
-        width: 320px;
-        padding: 30px 40px 10px; 
+    .form_block {
+      background-color: var(--blue00);
+      margin: 30px 0;
+      border-radius: 15px;
+      width: 320px;
+      padding: 30px 40px 10px;
     }
-    .form_line{
-        margin-bottom: 25px; 
+    .form_line {
+      margin-bottom: 25px;
     }
-    .form_line:first-of-type{
-        padding: 30px 0 30px 0; 
-        font-size: 30px;
+    .form_line:first-of-type {
+      padding: 30px 0 30px 0;
+      font-size: 30px;
     }
-    .form_line>input{
-        margin-top: 8px;
-        width:97%;
-        padding: 5px 8px;
+    .form_line > input {
+      margin-top: 8px;
+      width: 97%;
+      padding: 5px 8px;
     }
-    .form_line>button{
-        font-size: 16px;
-        padding: 6px 25px;
+    .form_line > button {
+      font-size: 16px;
+      padding: 6px 25px;
     }
-
     /***************** ZARZĄDZANIE *********************/
-    html, body{
-        font-size: 15px;
+    html,
+    body {
+      font-size: 15px;
     }
-    .mid_container{
-        width:460px;
+    .mid_container {
+      width: 460px;
     }
-    .middle_block{
-        width:100%;
-        margin-bottom: 25px;
+    .middle_block {
+      width: 100%;
+      margin-bottom: 25px;
     }
-    /*#user_info>.info{
-        width: 60%;
-        float:left;
+    #choose_role > .line > .role_radios,
+    #new_user > form > .line > .role_radios {
+      display: inline-block;
+      text-align: center;
     }
-    #user_info>.buttons{
-        width: 40%;
-        float:left;
+    #choose_role > .line > .role_radios > .radio,
+    #new_user > form > .line > .role_radios > .radio {
+      float: left;
     }
-    #user_info>.buttons>.line>button{
-        margin:2px 0;
+    #new_user > form > .input_line > input,
+    #change_book > .input_line > textarea,
+    #new_book > .input_line > textarea {
+      width: 330px;
+      margin-top: 0;
+      float: right;
     }
-    #user_info>.info>.line{
-        margin-bottom: 15px;
-    }
-
-    #user_info>.buttons{
-        height:unset;
-        overflow:unset;
-        visibility: hidden;
-    }
-    #user_info:hover .buttons{
-        visibility: visible;
-    }*/
-    #choose_role>.line>.role_radios, #new_user>form>.line>.role_radios{
-        display: inline-block;
-        text-align: center;
-    }
-    #choose_role>.line>.role_radios>.radio, #new_user>form>.line>.role_radios>.radio{
-        float: left;
-    }
-    #new_user>form>.input_line>input, #change_book>.input_line>textarea, #new_book>.input_line>textarea{
-        width:330px;
-        margin-top:0;
-        float:right;
-    }
-}
-
-@media only screen and (min-width: 769px){
+  }
+  
+  @media only screen and (min-width: 769px) {
     /***************** PASEK *********************/
-    #part_lib_name{
-        display: block;
+    #part_lib_name {
+      display: block;
     }
     /***************** ZARZĄDZANIE *********************/
-    html, body{
-        font-size: 16px;
+    html,
+    body {
+      font-size: 16px;
     }
-    .mid_container{
-        width:600px;
+    .mid_container {
+      width: 600px;
     }
-    .middle_block{
-        margin-bottom: 30px;
+    .middle_block {
+      margin-bottom: 30px;
     }
-    #choose_role>.line{
-        margin-bottom: 20px;
+    #choose_role > .line {
+      margin-bottom: 20px;
     }
-    #new_user>form>.input_line>input{
-        width:470px;
-        margin-top:0;
-        float:right;
+    #new_user > form > .input_line > input {
+      width: 470px;
+      margin-top: 0;
+      float: right;
     }
-    #change_book>form>.up>.left, #new_book>form>.up>.left{
-        width:49%;
-        float:left;
+    #change_book > form > .up > .left,
+    #new_book > form > .up > .left {
+      width: 49%;
+      float: left;
     }
-    #change_book>form>.up>.right, #new_book>form>.up>.right{
-        width:49%;
-        float:left;
+    #change_book > form > .up > .right,
+    #new_book > form > .up > .right {
+      width: 49%;
+      float: left;
     }
-    #change_book>form>.up>.right>.input_line>textarea, #new_book>form>.up>.right>.input_line>textarea{
-        height: 310px;
+    #change_book > form > .up > .right > .input_line > textarea,
+    #new_book > form > .up > .right > .input_line > textarea {
+      height: 310px;
     }
-    /*#book_info>.desc_pc{
-        display: block;
-    }
-    #book_info>.up>.left>.desc_phone{
-        display: none;
-    }
-    #book_info>.up{
-        display: flex;
-        flex-direction: row;
-    }
-    #book_info>.up>.left{
-        width:70%;
-    }
-    #book_info>.up>.right{
-        width:30%;
-    }
-    #book_info>.up>.left>.up>.picture>img{
-        width:70%;
-    }
-    #book_info>.up>.right>.quantity{
-        text-align: right;
-    }
-
-    #book_info>.up>.right>.buttons{
-        height:auto;
-        overflow: unset;
-        display: none;
-    }
-    #book_info:hover .up>.right>.buttons{
-        display:block;
-    }
-    #book_info>.up>.right>.buttons>button{
-        width:120px;
-    }*/
-
-}
-
-.frame {
+  }
+  
+  .frame {
     border: 1px solid var(--blue12);
     border-radius: 10px;
     padding: 20px;
@@ -546,25 +517,23 @@ div#new_user, div#new_book{
   .frame form button {
     margin-top: 20px;
   }
-.nav_container {
-
+  
+  .nav_container {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: var(--blue12);
-}
-
-
-@media only screen and (min-width: 1024px){
+  }
+  
+  @media only screen and (min-width: 1024px) {
     /***************** PASEK *********************/
-    #part_lib_name{
-        display: none;
+    #part_lib_name {
+      display: none;
     }
-    #full_lib_name{
-        display: block;
-    } 
-}
-
+    #full_lib_name {
+      display: block;
+    }
+  }
 
 
