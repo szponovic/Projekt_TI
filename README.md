@@ -26,9 +26,9 @@ Projekt strony bibliotecznej
 ...
 ## Autorzy
 
-- Izabela Nowak - inowak2@edu.cdv.pl [nowakizabela](https://github.com/nowakizabela).
-- Jan Frąckowiak - jfrackowiak@edu.cdv.pl [frackowiak147](https://github.com/frackowiak147).
-- Tomasz Biskupski - tbiskupski@edu.cdv.pl [szponovic](https://github.com/szponovic).
+- Izabela Nowak - inowak2@edu.cdv.pl [nowakizabela](https://github.com/nowakizabela)
+- Jan Frąckowiak - jfrackowiak@edu.cdv.pl [frackowiak147](https://github.com/frackowiak147)
+- Tomasz Biskupski - tbiskupski@edu.cdv.pl [szponovic](https://github.com/szponovic)
 
 ## Licencja
 
